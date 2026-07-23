@@ -29,7 +29,7 @@ void mooreDijkstra(int mat[taille][taille], int src) {
 
     // Initialisation
     for (int i = 0; i < taille; i++) {
-        dist[i] = INT_MAX;
+        dist[i] = INF;
         visite[i] = false;
     }
     dist[src] = 0;
@@ -51,7 +51,7 @@ void mooreDijkstra(int mat[taille][taille], int src) {
     // Affichage des résultats
     printf("\tDistances minimales depuis le sommet x%d :\n", src + 1);
     for (int i = 0; i < taille; i++) {
-        if (dist[i] == INT_MAX)
+        if (dist[i] == INF)
             printf("\tx%d : Infini\n", i + 1);
         else
             printf("\tx%d : %d\n", i + 1, dist[i]);
